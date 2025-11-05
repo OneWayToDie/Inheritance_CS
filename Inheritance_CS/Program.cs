@@ -81,12 +81,12 @@ namespace Academy
 			}
 			Process.Start	//Запускаю процесс открытия файла в системе, в который записали нашу группу
 				(
-				new ProcessStartInfo //Создаем новый объект, который содержит настройки для запуска процесса
-				{
+					new ProcessStartInfo //Создаем новый объект, который содержит настройки для запуска процесса
+					{
 						FileName = "Academy.txt",	//Указал имя файла
 						UseShellExecute = true      //Включает использование оболочки Windows для запуска, и позволяет автоматически определить через какую программу откроется файл
 													//https://learn.microsoft.com/ru-ru/dotnet/api/system.diagnostics.processstartinfo.useshellexecute?view=net-8.0
-				}
+					}
 				);
 #endif
 #if READ
