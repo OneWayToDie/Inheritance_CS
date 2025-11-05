@@ -1,7 +1,10 @@
 ﻿//#define INHERITANCE_OLD
 //#define INHERITANCE_NEW
-#define SAVE
+//#define SAVE
 //#define READ
+#define SAVE_1
+//#define READ_1
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Academy
 {
@@ -99,6 +103,40 @@ namespace Academy
 				Console.WriteLine(line);	
 			}
 #endif
+#if SAVE_1
+			Console.WriteLine("\t\t\t===========================================Academy===========================================\n\n");
+			//Base-class pointers: Generalization(Upcast - приведение дочернего объекта к базовому типу)
+			Human[] group =
+			{
+				new Student("Pinkman", "Jessie", 22, "Chemistry", "WW_220", 90, 95),
+				new Teacher("White", "Walter", 50, "Chemistry", 25),
+				new Graduate("Schreder", "Hank", 40, "Criminalistic", "OBN", 50, 60, "How to catch Heisenberg"),
+				new Student("Vercetty", "Tommy", 30, "Theft", "Vice", 98, 99),
+				new Teacher("Diaz", "Ricardo", 50, "Weapons distribution", 20),
+				new Teacher("Schwazenegger", "Arnold", 78, "Heavy Metal", 65)
+			};
+			Console.WriteLine(delimiter);
+			//Specialization:
+			for (int i = 0; i < group.Length; i++)
+			{
+				//group[i].Info();
+				Console.WriteLine(group[i].ToString());
+				Console.WriteLine(delimiter);
+			}
+			Save(group, "group.txt");
+#endif
+		}
+		static void Save(Human[] group, string filename)
+		{
+			StreamWriter writer = new StreamWriter(filename);
+
+			for (int i = 0; i < group.Length; i++)
+			{
+				writer.WriteLine(group[i].ToStringCSV());
+			}
+
+			writer.Close();
+			System.Diagnostics.Process.Start("notepad", filename);
 		}
 	}
 }
