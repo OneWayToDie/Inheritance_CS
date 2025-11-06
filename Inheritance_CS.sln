@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy", "Inheritance_CS\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry_Master", "Geometry_Master\Geometry_Master.csproj", "{C7E63C1B-E802-4E62-B4A3-512CECE64DAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification", "Notification\Notification.csproj", "{A38CCE61-747A-4A90-AE70-BF40A4A74AA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C7E63C1B-E802-4E62-B4A3-512CECE64DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E63C1B-E802-4E62-B4A3-512CECE64DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E63C1B-E802-4E62-B4A3-512CECE64DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A38CCE61-747A-4A90-AE70-BF40A4A74AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38CCE61-747A-4A90-AE70-BF40A4A74AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38CCE61-747A-4A90-AE70-BF40A4A74AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38CCE61-747A-4A90-AE70-BF40A4A74AA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
