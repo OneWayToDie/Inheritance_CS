@@ -13,6 +13,10 @@ namespace Geometry_Master
 			string delimiter = "\n----------------------------------------------\n";
 			Console.WriteLine("Информация о фигурах:\n");
 
+			var square = new Square(150, 100, 100, 2);
+			square.Info();
+			Console.WriteLine($"\n{delimiter}\n");
+
 			var rectangle = new Rectangle(150, 100, 550, 100, 2);
 			rectangle.Info();
 			Console.WriteLine($"\n{delimiter}\n");
