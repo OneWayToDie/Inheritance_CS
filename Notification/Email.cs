@@ -40,7 +40,7 @@ namespace Notification
 		}
 		private bool IsValidEmail(string email)
 		{
-			return !string.IsNullOrEmpty(email) && email.Contains("@") && email.Contains(".") && email.Length > 4;
+			return email.Contains("@") && email.Contains(".");
 		}
 	}
 }

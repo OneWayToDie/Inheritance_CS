@@ -48,6 +48,7 @@ namespace Notification
 			return Regex.IsMatch(phoneNumber, WithPlus) || Regex.IsMatch(phoneNumber, WithoutPlus);
 			//Regex - regular expression, необходим для валидации email, номеров и паролей. Инструмент для работы со строками, который находит точные слова, подходящие под опрдеделённый вид
 			//IsMatch - метод класса Regex, проверяет соответсвие строки к заданному шаблону 
+			//Ссылка на документацию о регулярых выражениях - https://learn.microsoft.com/ru-ru/dotnet/standard/base-types/regular-expressions
 		}
 	}
 }
