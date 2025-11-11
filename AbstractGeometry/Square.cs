@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AbstractGeometry
 {
-	public class Square :Rectangle
+	class Square :Rectangle
 	{
 		double side;
 		public double Get_Side() => this.side;

@@ -15,10 +15,10 @@ namespace AbstractGeometry
 		public void Set_Side(double side) => this.side = FilterSize((int)side);
 		public EquilateralTriangle(double side, int start_x, int start_y, int line_width, Color color) : base(start_x, start_y, line_width, color) => Set_Side(side);
 
-		public override double Get_Height() 
+		public override double GetHeight() 
 			=> Math.Sqrt(Math.Pow(side, 2) - Math.Pow(side / 2, 2));
 
-		public override double GetArea() => side * Get_Height() / 2;
+		public override double GetArea() => side * GetHeight() / 2;
 		public override double GetPerimeter() => 3 * side;
 		public override void Draw(PaintEventArgs e)
 		{
@@ -26,8 +26,8 @@ namespace AbstractGeometry
 			SolidBrush brush = new SolidBrush(Color);
 			PointF[] points =
 		   {
-				new PointF(StartX, StartY + (float)Get_Height()),
-				new PointF(StartX + (float)side, StartY + (float)Get_Height()),
+				new PointF(StartX, StartY + (float)GetHeight()),
+				new PointF(StartX + (float)side, StartY + (float)GetHeight()),
 				new PointF(StartX + (float)(side / 2), StartY)
 			};
 			e.Graphics.DrawPolygon(pen, points);
@@ -37,7 +37,7 @@ namespace AbstractGeometry
 		{
 			Console.WriteLine($"Равносторонний треугольник:");
 			Console.WriteLine($"Сторона: {side}");
-			Console.WriteLine($"Высота: {Get_Height():F2}");
+			Console.WriteLine($"Высота: {GetHeight():F2}");
 			base.Info(e);
 		}
 	}
